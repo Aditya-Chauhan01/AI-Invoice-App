@@ -1,6 +1,5 @@
 export const BASE_URL = "https://ai-invoice-app-backend.onrender.com";
 
-
 export const API_PATHS = {
     AUTH: {
         REGISTER: "/api/auth/register",  // Signup
