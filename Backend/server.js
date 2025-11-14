@@ -21,8 +21,6 @@ app.use(
     })
 );
 
-require("dotenv").config({ path: "./Backend/.env" });
-
 // Connect Database
 connectDB();
 
@@ -38,6 +36,11 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/invoices", invoiceRoutes);
 app.use("/api/ai", aiRoutes);
+
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully!");
+});
+
 
 
 // Start Server
